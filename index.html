@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>speakingWall</title>
+</head>
+<style>
+    .slideImage {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+
+    }
+
+    .slideImage img {
+        border-radius: 5%;
+        float: right;
+        width: 32em !important;
+        height: 26em;
+        object-fit: cover;
+        margin-top: -25px;
+
+
+    }
+    @media only screen and (max-width: 600px){
+        .slideImage img {
+       
+        width:100% !important;
+       
+    }
+        .project-container {
+            max-width: 100% !important;
+        }
+        .project-container img{
+            width:100% !important;
+        }
+        .project-content{
+            margin-top: 40px !important;
+        }
+    }
+
+    .slider {
+        position: relative;
+        max-width: 99%;
+        height: 30.625rem;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 45.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 1s;
+    }
+
+    .slide>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+
+    button .fas {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .btn-slide {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        height: 5.5rem;
+        width: 5.5rem;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 3rem;
+        transform: translate(-50%, -50%);
+    }
+
+    .next {
+        right: 3rem;
+        transform: translate(50%, -50%);
+    }
+
+    .dots-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .dot {
+        width: 25px;
+        height: 5px;
+        margin: 15px 5px;
+        border-radius: .5rem;
+        background: rgba(39, 39, 39, .5);
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background: #272727;
+    }
+
+    .sliderText {
+        position: absolute;
+        z-index: 100;
+        padding-left: 5em;
+
+    }
+
+    .next {
+        display: none;
+    }
+
+    .prev {
+        display: none;
+
+    }
+
+    .tag {
+        width: 100%;
+        height: 5em;
+        position: relative;
+        z-index: 101;
+
+    }
+
+    .innerTag {
+        padding: 18px;
+        background-color: rgb(176, 9, 9);
+        color: white;
+        width: 14em;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+</style>
+
+
+
+<body class="body-dark">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+    <header id="top" class="maxWidth">
+        <a class="header-title" href="#" style="color:white;">SPEAKING WALL</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#project" class="link">Services</a>
+                </li>
+                <li>
+                    <a href="#stack" class="link">Skills</a>
+                </li>
+                <li>
+                    <a href="#contact" class="link">Contact</a>
+                </li>
+            </ul>
+            <!-- 			<button aria-label="Toggle theme">
+                  <i aria-hidden="true" class="icon-normal fas fa-moon"></i>
+              </button> -->
+            <!-- <button aria-label="Toggle navbar">
+          <i aria-hidden="true" class="icon-normal fas fa-bars"></i>
+        </button> -->
+        </nav>
+    </header>
+
+
+
+
+
+
+    <div class="maxWidth sliderText">
+        <div class="hero" style="z-index: 100;">
+            <div class="hero-about">
+                <h1>
+                    <span class="hero-name" style="color: white;">Brushing Bangalore's Walls with Dreams</span>
+                    <span class="hero-name" style="color: white;"></span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slider">
+        <div class="tag">
+            <div class="innerTag">
+                <h2>GUARANTEED AFFORDABLE PRICE IN BANGALORE</h2>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="kenny-eliason-bwr03bYUzlk-unsplash.jpg" alt="Photo1" />
+        </div>
+        <div class="slide">
+            <img src="dan-farrell-fT49QnFucQ8-unsplash.jpg" alt="Photo3" />
+        </div>
+        <div class="slide">
+            <img src="dimitar-belchev-A7v5KWxnKQA-unsplash.jpg" alt="Photo2" />
+        </div>
+        <div class="slide">
+            <img src="women-of-the-world-unite-tyler-stirworld-210208011002 (1).jpg" alt="Photo3" />
+        </div>
+        <div class="slide">
+            <img src="photo_2023-12-18_23-25-50.jpg" alt="Photo3" />
+        </div>
+
+        <button class="btn-slide prev"><i class="fas fa-3x fa-chevron-circle-left"></i></button>
+        <button class="btn-slide next" id="clickButton"><i class="fas fa-3x fa-chevron-circle-right"></i></button>
+
+    </div>
+    <div class="dots-container" style="display: none">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="maxWidth">
+        <div class="slideImage " style="z-index: -10;">
+            <img style="box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);" src="mainPic.jpg"
+                alt="image-2022-07-26-201920536" />
+
+        </div>
+
+        <div class="hero" style="z-index: 100;">
+            <!-- <h1>
+                    Hi. I am
+                    <span class="hero-name">Aditya</span>
+                    <span class="hero-name">Chowdhary</span>
+                </h1> -->
+
+            <div class="hero-about">
+                <h1>
+
+                    <span style="font-size:36px;">Elevate Spaces, Elevate Souls with Our Bespoke Wallscapes</span>
+
+
+                </h1>
+                <br>
+                <p style="width: 90%;">
+                    Unleash the Colors of Your Imagination, where Bangalore's Walls Speak Artistry – Elevate Spaces,
+                    Elevate
+                    Souls with Our Bespoke Wallscapes.
+                </p>
+
+
+                <!-- <a class="resume" href="https://drive.google.com/drive/folders/17RQ6TVG8pnTYypgUn6ui97-jquIQQ5S5">
+                    <span class="btn">Resume</span>
+                </a> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section id="project" class="project" style="margin-top:4em;">
+        <!-- <h2 class="section-title">Projects</h2> -->
+
+
+        <div class="project-container " style="background-color:black;max-width: 75%;">
+
+            <img src="bigWall.jpg" alt="image-2022-07-26-201920536" height="250" width="450" style="object-fit: cover;width: 32em !important;
+            height: 26em;" />
+
+            <div class="project-content" style="text-align: left;">
+                <h1 style="font-size:36px;">Where Art meets affordability, and your walls tell the story of style
+                    without breaking the bank.</h1>
+                <p style="width: 90%;">Infuse Bangalore's Urban Canvas with Your Essence – Unveil the Extraordinary,
+                    Crafted Just for You.Masterpieces shouldn't Come with a Hefty Price Tag.</p>
+
+                <!-- <ul class="project-skill">
+                    <li>Adobe Illustrator</li>
+                    <li>Indesign</li>
+
+                </ul> -->
+
+                <!-- <ul class="project-link">
+                    <li>
+
+                        <a href="previewOne.html"><span class="btn">Preview</span></a>
+
+                    </li>
+
+                </ul> -->
+            </div>
+
+
+        </div>
+
+        <!-- <div class="project-container">
+
+            <img src="aaron-burden-CKlHKtCJZKk-unsplash.jpg" alt="image-2022-07-26-201920536" height="250" width="450"
+                style="object-fit: cover;" />
+
+            <div class="project-content">
+                <h3>Content writing</h3>
+                <p>"turn ideas into impactful narratives"</p>
+
+                <ul class="project-skill">
+                    <li>HTML</li>
+                    <li>Figma</li>
+                    <li>Css</li>
+                    <li>JAVASCRIPT</li>
+
+                </ul>
+
+                <ul class="project-link">
+                    <li>
+
+                        <button id="preview" onclick="myFunction()" class="btn">Preview</button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div> -->
+
+
+        <!-- <div class="project-container" id="toggle" style="justify-content:left;text-align:left;display: none;">
+
+
+
+            <div class="project-content" style="">
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">A journey
+                        through time</a></li>
+               
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">A Symbol of
+                        Unity and Harmony in Diversity</a></li>
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">A Must-Visit
+                        Destination for Spiritual Seekers</a></li>
+
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">Top 5 Crypto
+                        Faucets</a></li>
+
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">The influence of
+                        cloth on cultural and identity</a></li>
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">The Ritual of
+                        Upanayana</a></li>
+                <li class="" style="margin-bottom: 10px;"><a style="color: white;"
+                        href="https://drive.google.com/drive/folders/1ueSFCkt6ccYlLCBoOirSyrv3bIcqXUGO">The sacred
+                        thread</a></li>
+
+
+
+
+            </div>
+        </div> -->
+        <h2 class="section-title">Our service</h2>
+
+
+        <div class="project-container"
+            style="padding: 20px;background-color: black;justify-content: center;width: 100%;">
+
+            <div style="margin-right: 14px;">
+                <h2
+                    style="color: #ffdd00;text-align:left;position:absolute;margin-left:1em;margin-top: 13em;z-index: 102;">
+                    CORPORATE <br> WALL'S
+                </h2>
+                <img src="DPG Communication Agency Offices - Moscow _ Office Snapshots.jpg"
+                    alt="image-2022-07-26-201920536" height="450" width="295" style="object-fit: cover;opacity: 0.5;" />
+            </div>
+            <div>
+                <h2
+                    style="color: #ffdd00;text-align:left;position:absolute;margin-left:1em;margin-top: 13em;z-index: 102;">
+                    HOUSE INTERIOR <br> WALL'S
+                </h2>
+                <img src="Work from home tips — Adore Home Magazine.jpg" alt="image-2022-07-26-201920536" height="450"
+                    width="295" style="object-fit: cover;opacity: 0.5;" />
+            </div>
+            <div style="margin-left: 14px;">
+                <h2
+                    style="color: #ffdd00;text-align:left;position:absolute;margin-left:1em;margin-top: 12em;z-index: 102;">
+                    RESTAURANT &<br>CAFE<br> WALL'S
+                </h2>
+                <img src="Greek Restaurant & Pizzeria Mural.jpg" alt="image-2022-07-26-201920536" height="450"
+                    width="295" style="object-fit: cover;opacity: 0.5;" />
+            </div>
+            <div style="margin-left: 14px;">
+                <h2
+                    style="color: #ffdd00;text-align:left;position:absolute;margin-left:1em;margin-top: 13em;z-index: 102;">
+                    ABSTRACT <br> WALL'S
+                </h2>
+                <img src="Design Small Apartment.jpg" alt="image-2022-07-26-201920536" height="450" width="295"
+                    style="object-fit: cover;opacity: 0.5;" />
+            </div>
+
+
+            <!-- <div class="project-content">
+                <h3>Content Writing</h3>
+                <p>Created and managed engaging content for various digital platforms, including blog posts, social
+                    media, and website copy.</p>
+
+                <ul class="project-skill">
+                    <li>At Righteous Mind Infosystem</li>
+
+                </ul>
+
+
+            </div> -->
+        </div>
+
+
+
+
+
+
+        <!--     
+                <div class="project-container">
+    
+                    <img src="FB_IMG_1673208823517.jpg" alt="image-2022-07-26-201920536" height="250" width="450" style="object-fit: cover;" />
+    
+                    <div class="project-content">
+                        <h3>Wall Art's</h3>
+                        <p> Check out some of our favorite wall art for interiors </p>
+    
+                        <ul class="project-skill">
+                            <li>Adobe Illustrator</li>
+                            
+                        </ul>
+    
+                        <ul class="project-link">
+                            <li>
+                                <a class="resume" href="https://shareshell.000webhostapp.com/">
+                                    <a href="previewTwo.html"><span class="btn">Preview</span></a>
+                                </a>
+                            </li>
+    
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="project-container">
+
+                <img src="Screenshot (35).png" alt="image-2022-07-26-201920536" height="250" width="450" />
+
+                <div class="project-content">
+                    <h3>Shareshell</h3>
+                    <p>Build a project that helps user to find and search for a real estate property easily using</p>
+
+                    <ul class="project-skill">
+                        <li>HTML</li>
+                        <li>JQUERY</li>
+                        <li>CSS</li>
+                    </ul>
+
+                    <ul class="project-link">
+                        <li>
+                            <a class="resume" href="https://shareshell.000webhostapp.com/">
+                                <span class="btn">Preview</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+
+                <img src="Screenshot (61).png" alt="image-2022-07-26-201920536" height="250" width="450" />
+
+                <div class="project-content">
+                    <h3>Trend Me Store</h3>
+                    <p>Build an Ecommerce website project using NODE JS and MONGO DB for a retailer
+                        to sell fashion products.</p>
+
+                    <ul class="project-skill">
+                        <li>HTML</li>
+                        <li>JQUERY</li>
+                        <li>MONGOOSE</li>
+                        <li>Node JS</li>
+                        <li>CSS</li>
+                    </ul>
+
+                    <ul class="project-link">
+                        <li>
+                            <a class="resume" href="https://bit.ly/3MCG3w1">
+                                <span class="btn">Preview</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-container">
+
+                <img src="Screenshot (36).png" alt="image-2022-07-26-201920536" height="250" width="450" />
+
+                <div class="project-content">
+                    <h3>Crypto Tracker</h3>
+                    <p>Build a project that helps user to find Crypto currency details such as price, valome etc using API</p>
+
+                    <ul class="project-skill">
+                        <li>HTML</li>
+                        <li>JQUERY</li>
+                        <li>CSS</li>
+                    </ul>
+
+                    <ul class="project-link">
+                        <li>
+                            <a class="resume" href="https://adityachow1011.github.io/Crypto/">
+                                <span class="btn">Preview</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div> -->
+
+        <!-- <div class="project-container">
+              <img src="./assets/images/startpage.png" alt="startpage" />
+              <div class="project-content">
+                  <h3>Startpage</h3>
+                  <p>A minimal startpage for Firefox.</p>
+                  <ul class="project-skill">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                  </ul>
+                  <ul class="project-link">
+                      <li>
+                          <a href="#" aria-label="Source code" target="_blank"
+                              title="source code" rel="noopener"><i class="icon-border fas fa-code"></i></a>
+                      </li>
+                      <li>
+                          <a href="#" aria-label="Preview" target="_blank"
+                              title="preview" rel="noopener"><i aria-hidden="true"
+                                  class="icon-border fas fa-external-link-alt"></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div> -->
+    </section>
+
+
+
+
+
+    <section id="stack" class="stack">
+        <h2 class="section-title">WHY CHOOSE US</h2>
+        <div class="project-container " style="background-color:black;max-width: 75%;">
+
+            <img src="photo_2023-12-18_23-25-56.jpg" alt="image-2022-07-26-201920536" height="250" width="450" style="object-fit: cover;width:30em;
+            height:21em;border-radius:7px;" />
+
+            <div class="project-content" style="text-align: left;">
+                <h1 style="font-size:36px;">Choose Us to transform Wall art with a touch of excellence and personalized panache!</h1>
+                <p style="width: 90%;">
+                <ul>
+                    <li>1.Personalized Approach: Each project reflects your individual style and preferences. </li>
+                    <li>2.Quality Artist: Delivering top-notch quality
+                    </li>
+                    <li>3.Pricing: Guaranteed affordable prices, making art accessible to all
+
+                    </li>
+                    <li>4.Timely Delivery: Enjoy your newly adorned space without
+                        delays</li>
+                </ul>
+<!-- 
+                We believe in turning your ideas into reality. Our collaborative process
+                        ensures that each project reflects your individual style and preferences.
+                Our team of skilled artists and craftsmen is dedicated to delivering
+                        top-notch quality. From concept to completion, we uphold the highest standards in every detail.
+                ransforming your space with art shouldn't break the bank. We offer competitive
+                        prices without compromising on the excellence of our work, making art accessible to all.
+                        We understand the importance of deadlines. Our efficient workflow ensures that
+                your project is completed on time, allowing you to enjoy your newly adorned space without
+                        delays. -->
+                </p>
+
+                <!-- <ul class="project-skill">
+                    <li>Adobe Illustrator</li>
+                    <li>Indesign</li>
+
+                </ul> -->
+
+                <!-- <ul class="project-link">
+                    <li>
+
+                        <a href="previewOne.html"><span class="btn">Preview</span></a>
+
+                    </li>
+
+                </ul> -->
+            </div>
+
+
+        </div>
+
+        <!-- <div class="stack-container">
+
+            <div class="tech-container">
+                <i class="devicon-illustrator-plain colored"></i>
+                Illustrator
+            </div>
+            <div class="tech-container">
+                <i class="devicon-figma-plain colored"></i>
+                Figma
+            </div>
+            <div class="tech-container">
+                <i class="devicon-photoshop-plain colored"></i>
+                Photoshop
+            </div>
+            <div class="tech-container">
+                <i class="devicon-indesign-plain colored"></i>
+                Indesign
+            </div>
+
+
+
+        </div> -->
+
+    </section>
+
+
+    <!-- <section id="contact" class="contact">
+        <h2 class="section-title">Interest</h2>
+
+        <ul>
+            <li>
+                <a href="mailto:bhowmicksinjini02@gmail.com">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fas icon fa-"></i>Content Marketing
+                    </span>
+                </a>
+            </li>
+
+          
+            <li>
+                <a href="" aria-label="Linkedin">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-"></i>
+                        PR Management
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="" aria-label="Linkedin">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-"></i>
+                        Market Research
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="" aria-label="Linkedin">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-"></i>
+                        Photography
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="" aria-label="Linkedin">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-"></i>
+                        Social Media Marketing
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </section> -->
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in touch</h2>
+
+        <ul>
+            <li>
+                <a href="mailto:bhowmicksinjini02@gmail.com">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fas icon fa-envelope"></i>Email
+                    </span>
+                </a>
+            </li>
+
+            <!-- <li>
+                <a href="https://github.com/adityachow1011" aria-label="Github">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-github"></i>
+                        Github
+                    </span>
+                </a>
+            </li> -->
+
+            <li>
+                <a href="https://www.linkedin.com/in/sinjini-bhowmick-b36baa248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    aria-label="Linkedin">
+                    <span class="btn">
+                        <i aria-hidden="true" class="fab icon fa-linkedin"></i>
+                        Linkedin
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+
+    <footer style="text-align: center;justify-content: center;">
+        <small>&copy; A D I T Y A  C H O W D H A R Y , +91 8617897583, adityachow1011@gmail.com</small>
+    </footer>
+
+    <div class="scroll-container">
+        <div aria-label="Scroll up" class="scroll-up">
+            <a href="#top">
+                <i aria-hidden="true" class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        $("#toggle").slideToggle();
+        //   var x = document.getElementById("toggle");
+        //   if (x.style.display === "none") {
+        //     x.style.display = "block";
+        //   } else {
+        //     x.style.display = "none";
+        //   }
+    }
+
+
+    function Slider() {
+        const carouselSlides = document.querySelectorAll('.slide');
+        const btnPrev = document.querySelector('.prev');
+        const btnNext = document.querySelector('.next');
+        const dotsSlide = document.querySelector('.dots-container');
+        let currentSlide = 0;
+
+        const activeDot = function (slide) {
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+            document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('active');
+        };
+        activeDot(currentSlide);
+
+        const changeSlide = function (slides) {
+            carouselSlides.forEach((slide, index) => (slide.style.transform = `translateX(${100 * (index - slides)}%)`));
+        };
+        changeSlide(currentSlide);
+
+        btnNext.addEventListener('click', function () {
+            currentSlide++;
+            if (carouselSlides.length - 1 < currentSlide) {
+                currentSlide = 0;
+            };
+            changeSlide(currentSlide);
+            activeDot(currentSlide);
+        });
+        btnPrev.addEventListener('click', function () {
+            currentSlide--;
+            if (0 >= currentSlide) {
+                currentSlide = 0;
+            };
+            changeSlide(currentSlide);
+            activeDot(currentSlide);
+        });
+
+        dotsSlide.addEventListener('click', function (e) {
+            if (e.target.classList.contains('dot')) {
+                const slide = e.target.dataset.slide;
+                changeSlide(slide);
+                activeDot(slide);
+            }
+        });
+    };
+    Slider();
+
+
+
+
+    window.onload = function () {
+        var button = document.getElementById('clickButton');
+        setInterval(function () {
+            button.click();
+        }, 2000);  // this will make it click again every 1000 miliseconds
+    };
+</script>
